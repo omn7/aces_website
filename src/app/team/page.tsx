@@ -224,14 +224,15 @@ export default function TeamPage() {
 
             {/* Department Teams Accordion */}
             <SectionWrapper className="bg-gray-50">
-                <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="max-w-6xl mx-auto flex flex-wrap gap-4">
                     {DEPARTMENT_TEAMS.map((dept) => (
-                        <div key={dept.id} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                        <div key={dept.id} className="w-full md:w-[calc(50%-0.5rem)] bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
                             {/* Accordion Header */}
                             <button
                                 onClick={() => toggle(dept.id)}
-                                className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-emerald-50 transition-colors group"
+                                className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-emerald-50 active:bg-emerald-100 transition-colors group touch-manipulation"
                                 aria-expanded={openSection === dept.id}
+                                type="button"
                             >
                                 <div className="flex items-center gap-3">
                                     <span className="text-base font-bold text-gray-900 group-hover:text-emerald-700 transition-colors">
@@ -247,34 +248,33 @@ export default function TeamPage() {
                             </button>
 
                             {/* Accordion Body — Member Cards */}
-                            <div
-                                className={`transition-all duration-300 ease-in-out overflow-hidden ${openSection === dept.id ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}
-                            >
-                                <div className="px-6 pb-6 pt-2 border-t border-gray-100">
-                                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-2">
-                                        {dept.members.map((member, idx) => (
-                                            <div
-                                                key={idx}
-                                                className="flex flex-col items-center text-center bg-gray-50 rounded-2xl p-3 sm:p-4 border border-gray-100 hover:border-emerald-200 hover:shadow-md transition-all"
-                                            >
-                                                {/* Photo Placeholder */}
-                                                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold text-sm mb-2 sm:mb-3 shrink-0 ring-2 ring-emerald-200">
-                                                    {member.name.split(' ').filter(w => !['Mr.', 'Ms.', 'Dr.'].includes(w)).slice(0, 2).map(w => w[0]).join('')}
-                                                </div>
-                                                <p className="text-xs font-semibold text-gray-900 leading-tight mb-0.5">{member.name}</p>
-                                                <p className="text-xs text-emerald-600 font-medium mb-2">{member.role}</p>
-                                                <Link
-                                                    href="#"
-                                                    className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white border border-gray-200 text-gray-400 hover:bg-[#0A66C2] hover:text-white hover:border-[#0A66C2] transition-colors"
-                                                    aria-label={`LinkedIn profile for ${member.name}`}
+                            {openSection === dept.id && (
+                                <div className="border-t border-gray-100">
+                                    <div className="px-4 sm:px-6 pb-6 pt-2">
+                                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-2">
+                                            {dept.members.map((member, idx) => (
+                                                <div
+                                                    key={idx}
+                                                    className="flex flex-col items-center text-center bg-gray-50 rounded-2xl p-3 sm:p-4 border border-gray-100 hover:border-emerald-200 hover:shadow-md transition-all"
                                                 >
-                                                    <Linkedin className="w-4 h-4" />
-                                                </Link>
-                                            </div>
-                                        ))}
+                                                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold text-sm mb-2 sm:mb-3 shrink-0 ring-2 ring-emerald-200">
+                                                        {member.name.split(' ').filter(w => !['Mr.', 'Ms.', 'Dr.'].includes(w)).slice(0, 2).map(w => w[0]).join('')}
+                                                    </div>
+                                                    <p className="text-xs font-semibold text-gray-900 leading-tight mb-0.5">{member.name}</p>
+                                                    <p className="text-xs text-emerald-600 font-medium mb-2">{member.role}</p>
+                                                    <Link
+                                                        href="#"
+                                                        className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white border border-gray-200 text-gray-400 hover:bg-[#0A66C2] hover:text-white hover:border-[#0A66C2] transition-colors"
+                                                        aria-label={`LinkedIn profile for ${member.name}`}
+                                                    >
+                                                        <Linkedin className="w-4 h-4" />
+                                                    </Link>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            )}
                         </div>
                     ))}
                 </div>
