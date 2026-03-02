@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, Home } from 'lucide-react';
+import { Home } from 'lucide-react';
+import GoBackButton from '@/components/GoBackButton';
 
 export default function NotFound() {
     return (
@@ -42,13 +43,7 @@ export default function NotFound() {
                     <Home className="w-4 h-4" />
                     Go Home
                 </Link>
-                <button
-                    onClick={() => window.history.back()}
-                    className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-white hover:bg-gray-100 text-gray-700 font-bold rounded-full border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all"
-                >
-                    <ArrowLeft className="w-4 h-4" />
-                    Go Back
-                </button>
+                <GoBackButton />
             </div>
 
             {/* Footer credit */}
