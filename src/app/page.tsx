@@ -131,6 +131,60 @@ export default function Home() {
         </div>
       </SectionWrapper>
 
+      {/* Upcoming Event Highlight */}
+      <SectionWrapper alternate>
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-8 gap-2">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">Featured Event</h2>
+              <p className="text-gray-500">Don't miss out on what's happening next.</p>
+            </div>
+            <Link href="/events" className="text-primary font-semibold hover:text-primary-dark hidden sm:flex items-center group">
+              View all events
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+
+          <Card className="flex flex-col md:flex-row group overflow-hidden border-0 bg-white">
+            <div className="md:w-5/12 h-64 md:h-auto relative overflow-hidden">
+              <Image
+                src="/event1.png"
+                alt="Ideathon 2026"
+                fill
+                className="object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-60"></div>
+              <div className="absolute inset-0 bg-emerald-500/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500"></div>
+            </div>
+            <div className="p-8 md:p-10 md:w-7/12 flex flex-col justify-center">
+              <div className="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 mb-4 bg-emerald-50 px-3 py-1 rounded-full w-fit">
+                <Calendar className="w-4 h-4" />
+                Oct 15, 2026 • 10:00 AM
+              </div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">Ideathon 2026</h3>
+              <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+                Join us for 24 hours of coding, collaboration, and innovation. Build solutions to real-world problems and win exciting prizes while networking with industry experts.
+              </p>
+              <div>
+                <Link
+                  href="/events/hackathon"
+                  className="inline-flex justify-center items-center px-6 py-3 font-semibold rounded-full text-white bg-gray-900 hover:bg-primary shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all w-full sm:w-auto"
+                >
+                  Register Now
+                </Link>
+              </div>
+            </div>
+          </Card>
+
+          <div className="mt-8 text-center sm:hidden">
+            <Link href="/events" className="text-primary font-semibold hover:text-primary-dark flex justify-center items-center group">
+              View all events
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </SectionWrapper>
+ 
       {/* Students / Feedback Section */}
       <SectionWrapper alternate>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -200,59 +254,6 @@ export default function Home() {
         </div>
       </SectionWrapper>
 
-      {/* Upcoming Event Highlight */}
-      <SectionWrapper alternate>
-        <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-8 gap-2">
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">Featured Event</h2>
-              <p className="text-gray-500">Don't miss out on what's happening next.</p>
-            </div>
-            <Link href="/events" className="text-primary font-semibold hover:text-primary-dark hidden sm:flex items-center group">
-              View all events
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-
-          <Card className="flex flex-col md:flex-row group overflow-hidden border-0 bg-white">
-            <div className="md:w-5/12 h-64 md:h-auto relative overflow-hidden">
-              <Image
-                src="/event1.png"
-                alt="Ideathon 2026"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-60"></div>
-              <div className="absolute inset-0 bg-emerald-500/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500"></div>
-            </div>
-            <div className="p-8 md:p-10 md:w-7/12 flex flex-col justify-center">
-              <div className="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 mb-4 bg-emerald-50 px-3 py-1 rounded-full w-fit">
-                <Calendar className="w-4 h-4" />
-                Oct 15, 2026 • 10:00 AM
-              </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">Ideathon 2026</h3>
-              <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-                Join us for 24 hours of coding, collaboration, and innovation. Build solutions to real-world problems and win exciting prizes while networking with industry experts.
-              </p>
-              <div>
-                <Link
-                  href="/events/hackathon"
-                  className="inline-flex justify-center items-center px-6 py-3 font-semibold rounded-full text-white bg-gray-900 hover:bg-primary shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all w-full sm:w-auto"
-                >
-                  Register Now
-                </Link>
-              </div>
-            </div>
-          </Card>
-
-          <div className="mt-8 text-center sm:hidden">
-            <Link href="/events" className="text-primary font-semibold hover:text-primary-dark flex justify-center items-center group">
-              View all events
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-        </div>
-      </SectionWrapper>
-    </>
+   </>
   );
 }
