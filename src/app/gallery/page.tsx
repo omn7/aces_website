@@ -12,12 +12,12 @@ export const metadata: Metadata = {
         'ACES hackathon photos',
         'BVCOE student events gallery',
     ],
-    alternates: { canonical: 'https://aces-bvcoe.vercel.app/gallery' },
+    alternates: { canonical: 'https://acesbvcoel.com/gallery' },
     openGraph: {
         title: 'Gallery \u2014 ACES BVCOE Events & Moments',
         description:
             'A visual journey through ACES events, workshops, and memorable moments at Bharati Vidyapeeth College of Engineering, Pune.',
-        url: 'https://aces-bvcoe.vercel.app/gallery',
+        url: 'https://acesbvcoel.com/gallery',
         images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'ACES BVCOE Gallery' }],
     },
 };

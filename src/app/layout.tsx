@@ -46,14 +46,14 @@ export const metadata: Metadata = {
     "BVCOE Lavale Pune",
     "technical events Pune college",
   ],
-  authors: [{ name: "ACES BVCOE", url: "https://aces-bvcoe.vercel.app" }],
+  authors: [{ name: "ACES BVCOE", url: "https://acesbvcoel.com" }],
   creator: "ACES BVCOE",
   publisher: "Association of Computer Engineering Students, BVCOE",
   category: "Education",
   classification: "Student Organization",
-  metadataBase: new URL("https://aces-bvcoe.vercel.app"),
+  metadataBase: new URL("https://acesbvcoel.com"),
   alternates: {
-    canonical: "https://aces-bvcoe.vercel.app",
+    canonical: "https://acesbvcoel.com",
   },
   robots: {
     index: true,
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     title: "ACES BVCOE — Association of Computer Engineering Students",
     description:
       "ACES at Bharati Vidyapeeth College of Engineering, Pune Lavale — organizing hackathons, workshops, seminars, and cultural events for 300+ computer engineering students since 2014.",
-    url: "https://aces-bvcoe.vercel.app",
+    url: "https://acesbvcoel.com",
     siteName: "ACES BVCOE",
     images: [
       {
@@ -111,9 +111,9 @@ const organizationSchema = {
   "@type": "Organization",
   name: "ACES BVCOE — Association of Computer Engineering Students",
   alternateName: ["ACES", "ACES BVCOEL"],
-  url: "https://aces-bvcoe.vercel.app",
-  logo: "https://aces-bvcoe.vercel.app/aceslogo.png",
-  image: "https://aces-bvcoe.vercel.app/og-image.png",
+  url: "https://acesbvcoel.com",
+  logo: "https://acesbvcoel.com/aceslogo.png",
+  image: "https://acesbvcoel.com/og-image.png",
   description:
     "ACES is the student association of the Computer Engineering department at Bharati Vidyapeeth's College of Engineering, Pune Lavale. Founded in 2014, ACES organizes hackathons, workshops, seminars, cultural events, and professional development programs for 300+ students.",
   foundingDate: "2014-09-15",
@@ -143,13 +143,13 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "ACES BVCOE",
-  url: "https://aces-bvcoe.vercel.app",
+  url: "https://acesbvcoel.com",
   description: "Official website of the Association of Computer Engineering Students at Bharati Vidyapeeth College of Engineering, Pune.",
   potentialAction: {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://aces-bvcoe.vercel.app/events?q={search_term_string}",
+      urlTemplate: "https://acesbvcoel.com/events?q={search_term_string}",
     },
     "query-input": "required name=search_term_string",
   },

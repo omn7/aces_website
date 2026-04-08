@@ -15,12 +15,12 @@ export const metadata: Metadata = {
         'ACES email',
         'ACES phone number',
     ],
-    alternates: { canonical: 'https://aces-bvcoe.vercel.app/contact' },
+    alternates: { canonical: 'https://acesbvcoel.com/contact' },
     openGraph: {
         title: 'Contact ACES BVCOE \u2014 Association of Computer Engineering Students',
         description:
             'Have questions or want to collaborate with ACES? Reach out to us at Bharati Vidyapeeth College of Engineering, Pune Lavale.',
-        url: 'https://aces-bvcoe.vercel.app/contact',
+        url: 'https://acesbvcoel.com/contact',
         images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Contact ACES BVCOE' }],
     },
 };

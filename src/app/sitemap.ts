@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://aces-bvcoe.vercel.app';
+    const baseUrl = 'https://acesbvcoel.com';
     const lastModified = new Date();
 
     return [

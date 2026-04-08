@@ -14,12 +14,12 @@ export const metadata: Metadata = {
         'Bharati Vidyapeeth student leaders',
         'ACES cultural technical sports team',
     ],
-    alternates: { canonical: 'https://aces-bvcoe.vercel.app/team' },
+    alternates: { canonical: 'https://acesbvcoel.com/team' },
     openGraph: {
         title: 'Our Team \u2014 ACES BVCOE | Core Committee & Department Heads',
         description:
             'Meet the passionate student leaders of ACES at Bharati Vidyapeeth College of Engineering, Pune \u2014 driving technical, cultural, and sports initiatives.',
-        url: 'https://aces-bvcoe.vercel.app/team',
+        url: 'https://acesbvcoel.com/team',
         images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'ACES BVCOE Team' }],
     },
 };

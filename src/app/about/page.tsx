@@ -18,12 +18,12 @@ export const metadata: Metadata = {
         'ACES activities',
         'Dr. U. C. Patkar BVCOE',
     ],
-    alternates: { canonical: 'https://aces-bvcoe.vercel.app/about' },
+    alternates: { canonical: 'https://acesbvcoel.com/about' },
     openGraph: {
         title: 'About ACES \u2014 Association of Computer Engineering Students | BVCOE Pune',
         description:
             'ACES was founded on Engineers Day 2014 at Bharati Vidyapeeth College of Engineering, Lavale. Discover our mission, leadership, CSI & IEEE memberships, and activities.',
-        url: 'https://aces-bvcoe.vercel.app/about',
+        url: 'https://acesbvcoel.com/about',
         images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'About ACES BVCOE' }],
     },
 };
