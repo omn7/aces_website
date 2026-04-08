@@ -84,8 +84,8 @@ export default function AboutPage() {
                             </p>
                             <ul className="space-y-2">
                                 <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-teal-500"></span><strong className="text-gray-900">Dr. U. C. Patkar</strong> — Chairman</li>
-                                <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-teal-500"></span><strong className="text-gray-900">Prof. A. M. Ingole</strong> — Vice-Chairman</li>
-                                <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-teal-500"></span><strong className="text-gray-900">Prof. S. S. Pawar</strong> — Secretary</li>
+                                <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-teal-500"></span><strong className="text-gray-900">Prof. Kumkum Bala</strong> — Vice-Chairman</li>
+                                <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-teal-500"></span><strong className="text-gray-900">Prof. Tejal H. Patil</strong> — Secretary</li>
                             </ul>
                         </Card>
                     </div>

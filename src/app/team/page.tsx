@@ -141,7 +141,7 @@ const TEAM_MEMBERS = [
     { id: 2, name: 'Mr. Arya Amit Mokashi', role: 'President (BE)', linkedin: '#', photo: '/team/Arya Mokashi.jpg' },
     { id: 3, name: 'Ms. Mahek Vinod Wadhwani', role: 'Vice President (TE)', linkedin: '#', photo: '/team/Mahek Wadhwani.jpg' },
     { id: 4, name: 'Mr. Arya Haridas Kshirsagar', role: 'Vice President (TE)', linkedin: '#', photo: '/team/Arya Kshirsagar.png' },
-    { id: 5, name: 'Ms. Runal Milind Gavade', role: 'General Secretary (TE)', linkedin: '#', photo: '/team/Runal Gavade.JPG' },
+    { id: 5, name: 'Ms. Runal Milind Gavade', role: 'General Secretary (TE)', linkedin: '#', photo: '/team/runal gavade.png' },
     { id: 6, name: 'Mr. Yash Haribhau Sahane', role: 'General Secretary (TE)', linkedin: '#', photo: '/team/Yash Sahane.png' },
     { id: 7, name: 'Mr. Rupesh Balaji Shinde', role: 'Joint Secretary (TE)', linkedin: '#', photo: '/team/Rupesh Shinde.jpg' },
 ];
@@ -259,7 +259,7 @@ export default function TeamPage() {
                             <div className="relative h-full w-full rounded-3xl shadow-sm border border-gray-100 transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                                 <div className="absolute inset-0 bg-white p-6 rounded-3xl [backface-visibility:hidden] flex flex-col items-center justify-center text-center">
                                     <div className="w-28 h-28 bg-gray-100 rounded-full mb-4 overflow-hidden relative shadow-inner ring-4 ring-emerald-50">
-                                        <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-medium text-sm">Photo</div>
+                                        <img src="/team/tejal patil .png" alt="Prof. Tejal Patil" className="w-full h-full object-cover object-top" />
                                     </div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-1">Prof. Tejal Patil</h3>
                                     <p className="text-emerald-600 font-bold text-sm mb-4">Secretary</p>
@@ -281,7 +281,7 @@ export default function TeamPage() {
                             <div className="relative h-full w-full rounded-3xl shadow-md border border-gray-100 transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                                 <div className="absolute inset-0 bg-white p-6 rounded-3xl [backface-visibility:hidden] flex flex-col items-center justify-center text-center">
                                     <div className="w-32 h-32 bg-gray-100 rounded-full mb-4 overflow-hidden relative shadow-inner ring-4 ring-emerald-100 shadow-emerald-100/50">
-                                        <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-medium">Photo</div>
+                                        <img src="/team/Dr Udhay patkar.png" alt="Dr. U. C. Patkar" className="w-full h-full object-cover object-top" />
                                     </div>
                                     <h3 className="text-2xl font-bold text-gray-900 mb-1">Dr. U. C. Patkar</h3>
                                     <p className="text-emerald-600 font-bold text-base mb-4">Chairman</p>

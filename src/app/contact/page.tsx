@@ -6,7 +6,7 @@ import { Mail, MapPin, Phone, Instagram, Linkedin, Facebook } from 'lucide-react
 export const metadata: Metadata = {
     title: 'Contact ACES BVCOE \u2014 Get in Touch',
     description:
-        'Contact ACES (Association of Computer Engineering Students) at Bharati Vidyapeeth College of Engineering, Pune Lavale. Reach us for collaborations, event queries, or student support. Phone: +91-9404137110.',
+        'Contact ACES (Association of Computer Engineering Students) at Bharati Vidyapeeth College of Engineering, Pune Lavale. Reach us for collaborations, event queries, or student support. Phone: +91-9146573033.',
     keywords: [
         'Contact ACES BVCOE',
         'ACES contact Pune',
@@ -74,7 +74,7 @@ export default function ContactPage() {
                                 <div>
                                     <h3 className="text-lg font-bold text-gray-900 mb-1">Call Us</h3>
                                     <p className="text-gray-600">
-                                        <a href="tel:+919404137110" className="hover:text-primary transition-colors">+91-9404137110</a>
+                                        <a href="tel:+919146573033" className="hover:text-primary transition-colors">+91-9146573033</a>
                                     </p>
                                 </div>
                             </Card>
@@ -87,7 +87,7 @@ export default function ContactPage() {
                                 <div>
                                     <h3 className="text-lg font-bold text-gray-900 mb-1">Email Us</h3>
                                     <p className="text-gray-600">
-                                        <a href="mailto:contact@aces.edu" className="hover:text-primary transition-colors">contact@aces.edu</a>
+                                        <a href="mailto:acesbvcoel2012@gmail.com" className="hover:text-primary transition-colors">acesbvcoel2012@gmail.com</a>
                                     </p>
                                 </div>
                             </Card>
