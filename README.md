@@ -105,5 +105,5 @@ We welcome contributions from the ACES community!
 
 ---
 
-*Designed and maintained with ❤️ by the ACES Team.*
+*Designed and maintained by Om Narkhede & Shivam Murkute .*
 
