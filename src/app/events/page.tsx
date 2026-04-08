@@ -28,6 +28,39 @@ const UPCOMING_EVENTS = [
     }
 ];
 
+const FEATURED_EVENTS = [
+    {
+        id: 101,
+        title: 'IEEE International Conference — ICRAES 2026',
+        date: '22nd & 23rd April 2026',
+        time: 'Online Mode',
+        location: 'Bharati Vidyapeeth\u2019s College of Engineering, Lavale',
+        description: 'Bharati Vidyapeeth\u2019s College of Engineering, Lavale presents ICRAES 2026 — the 2nd International Conference on Recent Advances in Engineering and Sciences. This online conference brings together researchers, engineers, and scientists to share cutting-edge innovations and advancements across engineering disciplines.',
+        image: '/events/IEEE InternationalConference.png',
+        link: 'https://www.bvcoel.co.in/',
+    },
+    {
+        id: 102,
+        title: 'Students Felicitation',
+        date: 'Apr 28, 2026',
+        time: 'To Be Announced',
+        location: 'Bharati Vidyapeeth\u2019s College of Engineering, Lavale',
+        description: 'ACES proudly presents the Students Felicitation ceremony — a special occasion to honour and celebrate the outstanding achievements of our talented Computer Engineering students.',
+        image: '/events/StudentsFelicitation.png',
+        link: null,
+    },
+    {
+        id: 103,
+        title: 'BE Farewell Party',
+        date: 'Apr 29, 2026',
+        time: 'To Be Announced',
+        location: 'Bharati Vidyapeeth\u2019s College of Engineering, Lavale',
+        description: 'Bid a warm farewell to our graduating BE batch! Join us for a memorable evening filled with celebrations, memories, and good wishes as we send off our seniors in style.',
+        image: '/events/BEfairwell.png',
+        link: null,
+    },
+];
+
 const PAST_EVENTS = [
     {
         id: 8,
@@ -63,83 +96,83 @@ function EventCard({ event, isUpcoming = false }: { event: any, isUpcoming?: boo
 
     return (
         <>
-        <Card className="flex flex-col h-full">
-            <div className="h-48 bg-gray-200 relative flex items-center justify-center group cursor-pointer" onClick={() => event.image && setIsFlyerOpen(true)}>
-                {event.image ? (
-                    <Image src={event.image} alt={event.title} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
-                ) : (
-                    <span className="text-gray-400 font-medium">Event Image</span>
-                )}
-            </div>
-            <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{event.title}</h3>
-
-                <div className="space-y-2 mb-6 text-sm text-gray-600">
-                    <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4 text-primary" />
-                        <span>{event.date}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <Clock className="w-4 h-4 text-primary" />
-                        <span>{event.time}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <MapPin className="w-4 h-4 text-primary" />
-                        <span>{event.location}</span>
-                    </div>
-                </div>
-
-                <p className="text-gray-600 mb-6 flex-grow">{event.description}</p>
-
-                <div className="mt-auto flex flex-col gap-3">
-                    {event.image && (
-                        <button 
-                            onClick={(e) => { e.stopPropagation(); setIsFlyerOpen(true); }}
-                            className="inline-flex justify-center items-center w-full px-4 py-2.5 border border-transparent text-sm font-semibold rounded-full text-white bg-primary hover:bg-primary-dark shadow-md transition-all cursor-pointer"
-                        >
-                            Show Flyer
-                        </button>
-                    )}
-                    {isUpcoming && event.link && (
-                        <Link
-                            href={event.link}
-                            className="inline-flex justify-center items-center w-full px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-primary hover:bg-primary-dark shadow-sm transition-all"
-                        >
-                            Register Now
-                        </Link>
+            <Card className="flex flex-col h-full">
+                <div className="h-48 bg-gray-200 relative flex items-center justify-center group cursor-pointer" onClick={() => event.image && setIsFlyerOpen(true)}>
+                    {event.image ? (
+                        <Image src={event.image} alt={event.title} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
+                    ) : (
+                        <span className="text-gray-400 font-medium">Event Image</span>
                     )}
                 </div>
-            </div>
-        </Card>
+                <div className="p-6 flex flex-col flex-grow">
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">{event.title}</h3>
 
-        {isFlyerOpen && event.image && (
-            <div 
-                className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" 
-                onClick={() => setIsFlyerOpen(false)}
-                style={{ animation: 'fadeIn 0.2s ease-out' }}
-            >
-                <div 
-                    className="relative max-w-4xl w-full max-h-[90vh] bg-white rounded-2xl overflow-hidden shadow-2xl flex flex-col"
-                    onClick={e => e.stopPropagation()}
-                    style={{ animation: 'popIn 0.3s cubic-bezier(0.16, 1, 0.3, 1)' }}
+                    <div className="space-y-2 mb-6 text-sm text-gray-600">
+                        <div className="flex items-center gap-2">
+                            <Calendar className="w-4 h-4 text-primary" />
+                            <span>{event.date}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <Clock className="w-4 h-4 text-primary" />
+                            <span>{event.time}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <MapPin className="w-4 h-4 text-primary" />
+                            <span>{event.location}</span>
+                        </div>
+                    </div>
+
+                    <p className="text-gray-600 mb-6 flex-grow">{event.description}</p>
+
+                    <div className="mt-auto flex flex-col gap-3">
+                        {event.image && (
+                            <button
+                                onClick={(e) => { e.stopPropagation(); setIsFlyerOpen(true); }}
+                                className="inline-flex justify-center items-center w-full px-4 py-2.5 border border-transparent text-sm font-semibold rounded-full text-white bg-primary hover:bg-primary-dark shadow-md transition-all cursor-pointer"
+                            >
+                                Show Flyer
+                            </button>
+                        )}
+                        {isUpcoming && event.link && (
+                            <Link
+                                href={event.link}
+                                className="inline-flex justify-center items-center w-full px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-primary hover:bg-primary-dark shadow-sm transition-all"
+                            >
+                                Register Now
+                            </Link>
+                        )}
+                    </div>
+                </div>
+            </Card>
+
+            {isFlyerOpen && event.image && (
+                <div
+                    className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+                    onClick={() => setIsFlyerOpen(false)}
+                    style={{ animation: 'fadeIn 0.2s ease-out' }}
                 >
-                    <div className="p-4 border-b flex justify-between items-center bg-gray-50 shrink-0">
-                        <h3 className="text-lg font-bold text-gray-900">{event.title}</h3>
-                        <button 
-                            onClick={() => setIsFlyerOpen(false)}
-                            className="p-2 text-gray-500 hover:text-gray-900 hover:bg-gray-200 rounded-full transition-colors cursor-pointer"
-                        >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-                        </button>
-                    </div>
-                    <div className="relative w-full h-[70vh] bg-gray-100 flex items-center justify-center p-4">
-                        <div className="relative w-full h-full">
-                            <Image src={event.image} alt={event.title} fill className="object-contain" />
+                    <div
+                        className="relative max-w-4xl w-full max-h-[90vh] bg-white rounded-2xl overflow-hidden shadow-2xl flex flex-col"
+                        onClick={e => e.stopPropagation()}
+                        style={{ animation: 'popIn 0.3s cubic-bezier(0.16, 1, 0.3, 1)' }}
+                    >
+                        <div className="p-4 border-b flex justify-between items-center bg-gray-50 shrink-0">
+                            <h3 className="text-lg font-bold text-gray-900">{event.title}</h3>
+                            <button
+                                onClick={() => setIsFlyerOpen(false)}
+                                className="p-2 text-gray-500 hover:text-gray-900 hover:bg-gray-200 rounded-full transition-colors cursor-pointer"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+                            </button>
+                        </div>
+                        <div className="relative w-full h-[70vh] bg-gray-100 flex items-center justify-center p-4">
+                            <div className="relative w-full h-full">
+                                <Image src={event.image} alt={event.title} fill className="object-contain" />
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        )}
+            )}
         </>
     );
 }
@@ -159,10 +192,12 @@ export default function EventsPage() {
             <SectionWrapper>
                 <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3">
                     <span className="w-8 h-1 bg-primary rounded-full"></span>
-                    Coming Soon
+                    Featured Events
                 </h2>
-                <div className="flex items-center justify-center py-16 px-4 bg-white rounded-2xl border border-gray-100 shadow-sm glass">
-                    <p className="text-xl text-gray-500 font-medium text-center">New events are being planned. Stay tuned!</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {FEATURED_EVENTS.map(event => (
+                        <EventCard key={event.id} event={event} isUpcoming={true} />
+                    ))}
                 </div>
             </SectionWrapper>
 

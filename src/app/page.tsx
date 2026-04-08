@@ -148,8 +148,8 @@ export default function Home() {
           <Card className="flex flex-col md:flex-row group overflow-hidden border-0 bg-white">
             <div className="md:w-5/12 h-64 md:h-auto relative overflow-hidden">
               <Image
-                src="/event1.png"
-                alt="Ideathon 2026"
+                src="/events/EventIEEE.png"
+                alt="IEEE International Conference — ICRAES 2026"
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
               />
@@ -159,15 +159,18 @@ export default function Home() {
             <div className="p-8 md:p-10 md:w-7/12 flex flex-col justify-center">
               <div className="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 mb-4 bg-emerald-50 px-3 py-1 rounded-full w-fit">
                 <Calendar className="w-4 h-4" />
-                Oct 15, 2026 • 10:00 AM
+                22nd &amp; 23rd April 2026 • Online Mode
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">Ideathon 2026</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-1 group-hover:text-primary transition-colors">IEEE International Conference</h3>
+              <p className="text-sm font-semibold text-emerald-700 mb-4 uppercase tracking-wide">ICRAES 2026 — 2nd International Conference on Recent Advances in Engineering and Sciences</p>
               <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-                Join us for 24 hours of coding, collaboration, and innovation. Build solutions to real-world problems and win exciting prizes while networking with industry experts.
+                Bharati Vidyapeeth's College of Engineering, Lavale presents ICRAES 2026 — an online conference bringing together researchers, engineers, and scientists to share cutting-edge innovations and advancements across engineering disciplines.
               </p>
               <div>
                 <Link
-                  href="/events/hackathon"
+                  href="https://www.bvcoel.co.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex justify-center items-center px-6 py-3 font-semibold rounded-full text-white bg-gray-900 hover:bg-primary shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all w-full sm:w-auto"
                 >
                   Register Now
