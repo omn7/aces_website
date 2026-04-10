@@ -63,6 +63,15 @@ const FEATURED_EVENTS = [
 
 const PAST_EVENTS = [
     {
+        id: 9,
+        title: 'Workshop on Innovation, Creativity & Feasibility',
+        date: 'Apr 07, 2026',
+        time: '01:00 PM',
+        location: 'Classroom 108, Bharati Vidyapeeth\u2019s College of Engineering, Lavale',
+        description: 'An insightful workshop featuring Guest Speaker Mr. Shadab Husain, Senior Manager \u2013 Incubation at AIC-Pinnacle Entrepreneurship Forum. With 10+ years in startup incubation & ecosystem building, he is a startup ecosystem expert and author of Strategic Entrepreneurial Management (SEM).',
+        image: '/events/workshop on innovation, creativity.png',
+    },
+    {
         id: 8,
         title: 'Marathi Rajbhasha Din & Kavi Sammelan',
         date: 'Feb 27, 2026',
